@@ -17,7 +17,7 @@ class SQLAlchemyConnectionField(ConnectionField):
 
     @classmethod
     def get_query(cls, model, context, info, args):
-        return get_query(model, context)
+        return get_query(model, context, info, args)
 
     @classmethod
     def connection_resolver(cls, resolver, connection, model, root, args, context, info):
